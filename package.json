@@ -1,0 +1,16 @@
+{
+  "name": "athena-shield-final-real-production",
+  "version": "7.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix apps/api && npm install --prefix apps/web",
+    "dev:api": "npm --prefix apps/api run dev",
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "start:api": "npm --prefix apps/api start",
+    "build:web": "npm --prefix apps/web run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
